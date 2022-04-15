@@ -34,46 +34,44 @@ puts '##########################################################################
 
 sleep(2)
 
-puts " "
-puts " "
+puts ' '
+puts ' '
 CharTiming.slow("Hello, #{name}. You must be exhausted, but I can see that you're #{mood}. ", 0.02)
-puts " "
+puts ' '
 CharTiming.slow("Maybe just sit here for a while and take it in -- look, the weather is #{weather}, ", 0.02)
 CharTiming.slow("and you don't have to do anything right now. Remember #{pet}? What a lovely creature. ", 0.02)
-    puts " "
+puts ' '
 CharTiming.slow("Don't get stressed. Just sit still and think really hard about #{favourite_thing}. ", 0.02)
 
 puts ' '
 puts ' '
-CharTiming.slow("...", 1)
-puts " "
-puts " "
-CharTiming.slow("So...", 1) 
+CharTiming.slow('...', 1)
+puts ' '
+puts ' '
+CharTiming.slow('So...', 1)
 CharTiming.slow("the thing is... your plane went down about a day ago, you've been unconscious for a while. ", 0.08)
-puts " "
-puts " "
-CharTiming.slow("...", 1)
+puts ' '
+puts ' '
+CharTiming.slow('...', 1)
 CharTiming.slow("you're the only survivor -- you're okay, though. ", 0.08)
-puts " "
-puts " "
-CharTiming.slow("...".light_blue, 1)
-
+puts ' '
+puts ' '
+CharTiming.slow('...', 1)
 
 loop do
-    CharTiming.slow("are you okay? (Y/N) \n".light_blue, 0.08)
-    if_okay = STDIN.gets.chomp.downcase
-if if_okay == "y"
-    puts " "
+  CharTiming.slow("are you okay? (Y/N) \n".light_blue, 0.08)
+  if_okay = $stdin.gets.chomp.downcase
+  puts ' '
+  case if_okay
+  when 'y'
     CharTiming.slow("I knew it! Thank goodness for that, because you have to get out of here. \n", 0.08)
     break
-elsif if_okay == "n"
-    puts " "
+  when 'n'
     CharTiming.slow("I'm sorry to hear that... but you don't have time to feel bad, I'm afraid. ", 0.08)
     CharTiming.slow("You have to get out of here. \n", 0.08)
     break
-else 
-    puts " "
+  else
     puts "Invalid input, type 'Y' or 'N'".red
-    puts " "
-end
+    puts ' '
+  end
 end

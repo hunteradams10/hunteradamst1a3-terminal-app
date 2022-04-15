@@ -1,27 +1,17 @@
+# frozen_string_literal: true
+
 module CharTiming
-    def CharTiming.slow(string, timeout)   
-      string.each_char do |c| 
-        print(c)
-        sleep(timeout)
-      end
+  def self.slow(string, timeout)
+    string.each_char do |c|
+      print(c)
+      sleep(timeout)
     end
   end
-
-
+end
 
 module HitPoints
-
-    def CurrentHitpoints
-    end
-
-    
-    def HitPoints.take(diff)
-        hit_points = i
-        i - diff
-        return
-    end
-
+  def self.take(num1, num2)
+    result = num1 - num2
+    puts result
+  end
 end
-  
-  
-
