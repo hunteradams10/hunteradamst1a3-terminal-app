@@ -9,8 +9,8 @@ module CharTiming
   end
 end
 
-# module HitPoints
-#   def self.take(num1, num2)
+# module Calculator
+#   def self.subtract(num1, num2)
 #     result = num1 - num2
 #     puts result
 #   end
