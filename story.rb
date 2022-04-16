@@ -5,7 +5,6 @@ require_relative './classes'
 require 'tty-prompt'
 require 'colorize'
 require 'tty-font'
-require 'tty-prompt'
 
 font = TTY::Font.new(:standard)
 
