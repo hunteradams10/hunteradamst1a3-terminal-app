@@ -115,7 +115,7 @@ puts pastel.red(font.write('Temple  Island'))
 #     puts " "
 #     puts "This ring might be valuable when you get out of here."
 #     puts " "
-# else 
+# else
 #     nil
 # end
 
@@ -131,16 +131,15 @@ puts pastel.red(font.write('Temple  Island'))
 # CharTiming.slow("... there's a low growling nearby. Beside you, about a meter away, is a wolf. ".italic, 0.08)
 # puts " "
 # puts " "
-CharTiming.slow("... a presumably hungry wolf.".italic, 0.08)
-puts " "
-puts " "
+CharTiming.slow('... a presumably hungry wolf.'.italic, 0.08)
+puts ' '
+puts ' '
 CharTiming.slow("Okay, don't stress. You have full health. ".italic, 0.08)
-puts " "
-puts " "
-puts " "
-puts "HP: " + "#{hp}".green.bold
-puts " "
-puts " "
-puts "What do you want to do?"
-
-
+puts ' '
+puts ' '
+puts ' '
+puts "HP: #{hp.to_s.green.bold}"
+puts ' '
+puts ' '
+puts 'What do you want to do?'
+puts ' '
