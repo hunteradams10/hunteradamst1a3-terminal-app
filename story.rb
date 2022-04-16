@@ -5,6 +5,7 @@ require_relative './classes'
 require 'tty-prompt'
 require 'colorize'
 require 'tty-font'
+require 'tty-box'
 
 font = TTY::Font.new(:standard)
 
@@ -27,70 +28,72 @@ puts pastel.red(font.write('Temple  Island'))
 
 puts ' '
 
-# puts '#############################################################################################'
-# puts ' '
-# puts 'CHAPTER ONE'.cyan
-# puts ' '
-# puts '#############################################################################################'
+puts '#############################################################################################'
+puts ' '
+puts 'WELCOME'.cyan
+puts ' '
+puts '#############################################################################################'
 
-# sleep(2)
+sleep(2)
 
-# puts ' '
-# puts ' '
-# CharTiming.slow("Hello, #{name}. You must be exhausted, but I can see that you're #{mood}. ", 0.08)
-# puts ' '
-# CharTiming.slow("Maybe just sit here for a while and take it in -- look, the weather is #{weather}, ", 0.08)
-# CharTiming.slow("and you don't have to do anything right now. Remember #{pet}? What a lovely creature. ", 0.08)
-# puts ' '
-# CharTiming.slow("Don't get stressed. Just sit still and think really hard about #{favourite_thing}. ", 0.08)
+print TTY::Box.frame { "CHAPTER ONE                                                                 " }
 
-# puts ' '
-# puts ' '
-# CharTiming.slow('...', 1)
-# puts ' '
-# puts ' '
-# CharTiming.slow('So...', 1)
-# CharTiming.slow("the thing is... your plane went down about a day ago, you've been unconscious for a while. ", 0.08)
-# puts ' '
-# puts ' '
-# CharTiming.slow('...', 1)
-# CharTiming.slow("you're the only survivor -- you're okay, though. ", 0.08)
-# puts ' '
-# puts ' '
-# CharTiming.slow('...', 1)
+puts ' '
+puts ' '
+CharTiming.slow("Hello, #{name}. You must be exhausted, but I can see that you're #{mood}. ", 0.08)
+puts ' '
+CharTiming.slow("Maybe just sit here for a while and take it in -- look, the weather is #{weather}, ", 0.08)
+CharTiming.slow("and you don't have to do anything right now. Remember #{pet}? What a lovely creature. ", 0.08)
+puts ' '
+CharTiming.slow("Don't get stressed. Just sit still and think really hard about #{favourite_thing}. ", 0.08)
 
-# loop do
-#   CharTiming.slow("are you okay? (Y/N) \n".light_blue, 0.08)
-#   if_okay = $stdin.gets.chomp.downcase
-#   puts ' '
-#   case if_okay
-#   when 'y'
-#     CharTiming.slow("I knew it! Thank goodness for that, because you have to get out of here. \n", 0.08)
-#     break
-#   when 'n'
-#     CharTiming.slow("I'm sorry to hear that... but you don't have time to feel bad, I'm afraid. ", 0.08)
-#     CharTiming.slow("You have to get out of here. \n", 0.08)
-#     break
-#   else
-#     puts "Invalid input, type 'Y' or 'N'".red
-#     puts ' '
-#   end
-# end
+puts ' '
+puts ' '
+CharTiming.slow('...', 1)
+puts ' '
+puts ' '
+CharTiming.slow('So...', 1)
+CharTiming.slow("the thing is... your plane went down about a day ago, you've been unconscious for a while. ", 0.08)
+puts ' '
+puts ' '
+CharTiming.slow('...', 1)
+CharTiming.slow("you're the only survivor -- you're okay, though. ", 0.08)
+puts ' '
+puts ' '
+CharTiming.slow('...', 1)
 
-# puts " "
+loop do
+  CharTiming.slow("are you okay? (Y/N) \n".light_blue, 0.08)
+  if_okay = $stdin.gets.chomp.downcase
+  puts ' '
+  case if_okay
+  when 'y'
+    CharTiming.slow("I knew it! Thank goodness for that, because you have to get out of here. \n", 0.08)
+    break
+  when 'n'
+    CharTiming.slow("I'm sorry to hear that... but you don't have time to feel bad, I'm afraid. ", 0.08)
+    CharTiming.slow("You have to get out of here. \n", 0.08)
+    break
+  else
+    puts "Invalid input, type 'Y' or 'N'".red
+    puts ' '
+  end
+end
 
-# CharTiming.slow("... looks like it's about to rain. Better get moving. ", 0.08)
-# puts " "
-# CharTiming.slow("Take a quick look around before you go; you might find something useful. ", 0.08)
-# puts " "
-# puts " "
-# CharTiming.slow("You look around the sandy shoreline and discover a pineapple, a photo of your loved one, and a ring. ".italic, 0.08)
-# puts " "
-# puts " "
-# sleep 2
-# CharTiming.slow("Unfortunately, you can only take one item. Choose wisely.", 0.08)
-# puts " "
-# puts " "
+puts " "
+
+CharTiming.slow("... looks like it's about to rain. Better get moving. ", 0.08)
+puts " "
+CharTiming.slow("Take a quick look around before you go; you might find something useful. ", 0.08)
+puts " "
+puts " "
+CharTiming.slow("You look around the sandy shoreline and discover a pineapple, a photo of your loved one, and a ring. ".italic, 0.08)
+puts " "
+puts " "
+sleep 2
+CharTiming.slow("Unfortunately, you can only take one item. Choose wisely.", 0.08)
+puts " "
+puts " "
 
 choice = prompt.select("What will you take?") do |option|
     option.choice "Pineapple"
