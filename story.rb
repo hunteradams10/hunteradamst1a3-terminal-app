@@ -145,67 +145,61 @@ puts ' '
 puts ' '
 
 choice = prompt.select('What will you do?') do |option|
-  option.choice "a) Reason with the wolf! (30% chance)"
-  option.choice "b) Attack the wolf!! (40% chance)"
-  option.choice "c) Climb the tree! (50% chance)"
+  option.choice 'a) Reason with the wolf! (30% chance)'
+  option.choice 'b) Attack the wolf!! (40% chance)'
+  option.choice 'c) Climb the tree! (50% chance)'
 end
 
 case choice
-when "a) Reason with the wolf! (30% chance)"
-    number = rand(1..100)
-    if number <= 30
-        puts "Success!".green 
-        CharTiming.slow("You tell the wolf your story, and it is moved. It stops growling, ", 0.08)
-        CharTiming.slow("and listens intently. ", 0.08)
-        CharTiming.slow("'That's the saddest story I have ever heard.' ", 0.08)
-        CharTiming.slow("says the wolf.", 0.08)
-        CharTiming.slow("It can talk!!".cyan, 0.08)
-    elsif number > 30
-        puts "Unsuccessful".light_red
-        CharTiming.slow("The wolf growls and launches itself at you! ", 0.08)
-        hp = 80
-        CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
-        CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
-        CharTiming.slow("It can talk!!".bold.cyan, 0.08)
-    else 
-        nil
-    end
-when "b) Attack the wolf!! (40% chance)"
-    number = rand(1..100)
-    if number <= 40
-        puts "Success!".green 
-        CharTiming.slow("You wind up and punch the wolf square in the face. It whimpers ", 0.08)
-        CharTiming.slow("and steps back.", 0.08)
-        CharTiming.slow("'There's no need for violence!' it howls, 'growling is a force of habit!' ", 0.08)
-        CharTiming.slow("It can talk!!".cyan, 0.08)
-    elsif number > 40
-        puts "Unsuccessful".light_red
-        CharTiming.slow("The wolf growls and launches itself at you! ", 0.08)
-        hp = 80
-        CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
-        CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
-        CharTiming.slow("It can talk!!".bold.cyan, 0.08)
-    else 
-        nil
-    end
-when "c) Climb the tree! (50% chance)"
-    number = rand(1..100)
-    if number <= 50
-        puts "Success!".green 
-        CharTiming.slow("You turn and scramble up the tree you were taking shelter under. ", 0.08)
-        CharTiming.slow("The wolf approaches the trunk and gazes up at you. ", 0.08)
-        CharTiming.slow("'Hmm. Smart.' says the wolf. ", 0.08)
-        CharTiming.slow("It can talk!!".cyan, 0.08)
-    elsif number > 40
-        puts "Unsuccessful".light_red
-        CharTiming.slow("The wolf growls and launches itself at you! ", 0.08)
-        hp = 80
-        CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
-        CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
-        CharTiming.slow("It can talk!!".bold.cyan, 0.08)
-    else 
-        nil
-    end
+when 'a) Reason with the wolf! (30% chance)'
+  number = rand(1..100)
+  if number <= 30
+    puts 'Success!'.green
+    CharTiming.slow('You tell the wolf your story, and it is moved. It stops growling, ', 0.08)
+    CharTiming.slow('and listens intently. ', 0.08)
+    CharTiming.slow("'That's the saddest story I have ever heard.' ", 0.08)
+    CharTiming.slow('says the wolf.', 0.08)
+    CharTiming.slow('It can talk!!'.cyan, 0.08)
+  elsif number > 30
+    puts 'Unsuccessful'.light_red
+    CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
+    hp = 80
+    CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
+    CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
+    CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
+  end
+when 'b) Attack the wolf!! (40% chance)'
+  number = rand(1..100)
+  if number <= 40
+    puts 'Success!'.green
+    CharTiming.slow('You wind up and punch the wolf square in the face. It whimpers ', 0.08)
+    CharTiming.slow('and steps back.', 0.08)
+    CharTiming.slow("'There's no need for violence!' it howls, 'growling is a force of habit!' ", 0.08)
+    CharTiming.slow('It can talk!!'.cyan, 0.08)
+  elsif number > 40
+    puts 'Unsuccessful'.light_red
+    CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
+    hp = 80
+    CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
+    CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
+    CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
+  end
+when 'c) Climb the tree! (50% chance)'
+  number = rand(1..100)
+  if number <= 50
+    puts 'Success!'.green
+    CharTiming.slow('You turn and scramble up the tree you were taking shelter under. ', 0.08)
+    CharTiming.slow('The wolf approaches the trunk and gazes up at you. ', 0.08)
+    CharTiming.slow("'Hmm. Smart.' says the wolf. ", 0.08)
+    CharTiming.slow('It can talk!!'.cyan, 0.08)
+  elsif number > 40
+    puts 'Unsuccessful'.light_red
+    CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
+    hp = 80
+    CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
+    CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
+    CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
+  end
 end
 puts ' '
 puts ' '
