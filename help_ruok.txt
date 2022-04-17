@@ -1,2 +1,3 @@
-Enter Y or N on your keyboard, then hit Enter. :)
-
+This is a story-based game where you follow along reading the 
+prompts and make choices accordingly. You can exit any time you
+are asked for input by typing 'exit' and hitting Enter. :)
