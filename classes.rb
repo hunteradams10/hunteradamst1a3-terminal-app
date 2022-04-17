@@ -10,7 +10,7 @@ module CharTiming
 end
 
 def exit_program
-    exit(0)
+  exit(0)
 end
 
 # module Calculator
