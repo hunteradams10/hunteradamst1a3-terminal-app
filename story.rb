@@ -75,7 +75,7 @@ puts ' '
 CharTiming.slow('...', 1)
 
 loop do
-  CharTiming.slow("are you okay? (Y/N or help) \n".light_blue, 0.08)
+  CharTiming.slow("are you okay? (Y/N, help or exit) \n".light_blue, 0.08)
   if_okay = $stdin.gets.chomp.downcase
   puts ' '
   case if_okay
@@ -89,8 +89,10 @@ loop do
   when "help"
     help_ruok = File.open("help_ruok.txt")
     puts help_ruok.read
+  when "exit"
+    exit!(0)
   else
-    puts "Invalid input, type 'Y', 'N' or 'help'".red
+    puts "Invalid input, type 'Y', 'N', 'help', or 'exit'".red
     puts ' '
   end
 end
