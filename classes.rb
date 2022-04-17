@@ -9,6 +9,10 @@ module CharTiming
   end
 end
 
+def exit_program
+    exit(0)
+end
+
 # module Calculator
 #   def self.subtract(num1, num2)
 #     result = num1 - num2
