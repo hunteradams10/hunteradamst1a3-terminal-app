@@ -140,113 +140,113 @@ end
 
 chosen_item = choice
 
-CharTiming.slow("You hug your #{chosen_item} to you, and make your way into the jungle ahead ".italic, 0.08)
-CharTiming.slow('and the rain begins to fall. '.italic, 0.08)
-CharTiming.slow('You run into the forest and a small stroke of fear creeps up your spine, '.italic, 0.08)
-CharTiming.slow('but you manage to take shelter under a tree, and the rain stops buffeting you.'.italic, 0.08)
-sleep 3
-puts ' '
-puts ' '
-CharTiming.slow("... there's a low growling nearby. Beside you, about a meter away, is a wolf. ".italic, 0.08)
-puts ' '
-puts ' '
-CharTiming.slow('... a presumably hungry wolf.'.italic, 0.08)
-puts ' '
-puts ' '
-CharTiming.slow("Okay, don't stress. You have full health. ".italic, 0.08)
-puts ' '
-puts ' '
-puts ' '
-puts "HP: #{hp.to_s.green.bold}"
-puts ' '
-puts ' '
-begin
-  choice = prompt.select('What will you do?') do |option|
-    option.choice 'a) Reason with the wolf! (30% chance)'
-    option.choice 'b) Attack the wolf!! (40% chance)'
-    option.choice 'c) Climb the tree! (50% chance)'
-    option.choice 'd) exit'
-  end
-rescue StandardError => e
-  puts 'an unknown error occured. Please restart the program.'.red
-end
-case choice
-when 'a) Reason with the wolf! (30% chance)'
-  number = rand(1..100)
-  if number <= 30
-    puts 'Success!'.green
-    CharTiming.slow('You tell the wolf your story, and it is moved. It stops growling, ', 0.08)
-    CharTiming.slow('and listens intently. ', 0.08)
-    CharTiming.slow("'That's the saddest story I have ever heard.' ", 0.08)
-    CharTiming.slow('says the wolf. ', 0.08)
-    CharTiming.slow('It can talk!!'.cyan, 0.08)
-  elsif number > 30
-    puts 'Unsuccessful'.light_red
-    CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
-    hp = 80
-    CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
-    CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
-    CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
-  end
-when 'b) Attack the wolf!! (40% chance)'
-  number = rand(1..100)
-  if number <= 40
-    puts 'Success!'.green
-    CharTiming.slow('You wind up and punch the wolf square in the face. It whimpers ', 0.08)
-    CharTiming.slow('and steps back.', 0.08)
-    CharTiming.slow("'There's no need for violence!' it howls, 'growling is a force of habit!' ", 0.08)
-    CharTiming.slow('It can talk!!'.cyan, 0.08)
-  elsif number > 40
-    puts 'Unsuccessful'.light_red
-    CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
-    hp = 80
-    CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
-    CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
-    CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
-  end
-when 'c) Climb the tree! (50% chance)'
-  number = rand(1..100)
-  if number <= 50
-    puts ' '
-    puts 'Success!'.green
-    puts ' '
-    CharTiming.slow('You turn and scramble up the tree you were taking shelter under. ', 0.08)
-    CharTiming.slow('The wolf approaches the trunk and gazes up at you. ', 0.08)
-    CharTiming.slow("'Hmm. Smart.' says the wolf. ", 0.08)
-    CharTiming.slow('It can talk!!'.cyan, 0.08)
-  elsif number > 40
-    puts ' '
-    puts 'Unsuccessful'.light_red
-    puts ' '
-    CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
-    hp = 80
-    CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
-    CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
-    CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
-  end
-when 'd) exit'
-  exit!(0)
-end
-puts ' '
-puts ' '
-CharTiming.slow("'You didn't need to freak out', says the wolf, 'I haven't ", 0.08)
-CharTiming.slow("seen anyone here for a long time. You can't be here on purpose. ", 0.08)
-CharTiming.slow("Lucky for you I'm not as mean as I look. I'll help you get out...", 0.08)
-CharTiming.slow("if you have a pineapple.'", 0.08)
-puts ' '
-puts ' '
-if chosen_item == 'Pineapple'
-  CharTiming.slow('You show him your pineapple, and he takes it with glee. '.italic, 0.08)
-  CharTiming.slow("'Fantastic! These are my favourite.' ", 0.08)
-  CharTiming.slow('he looks around, '.italic, 0.08)
-  CharTiming.slow("'Hmm...' ", 0.08)
-else
-  CharTiming.slow('You shake your head and tell him that you have only '.italic, 0.08)
-  CharTiming.slow("your #{chosen_item}. He clicks his tongue and shrugs. ".italic, 0.08)
-  CharTiming.slow("'What am I supposed to do with a #{chosen_item}? Oh well, ", 0.08)
-  CharTiming.slow("it was worth a shot. Don't worry, I'll still help you.' ", 0.08)
-end
-CharTiming.slow('He sniffs the air. '.italic, 0.08)
+# CharTiming.slow("You hug your #{chosen_item} to you, and make your way into the jungle ahead ".italic, 0.08)
+# CharTiming.slow('and the rain begins to fall. '.italic, 0.08)
+# CharTiming.slow('You run into the forest and a small stroke of fear creeps up your spine, '.italic, 0.08)
+# CharTiming.slow('but you manage to take shelter under a tree, and the rain stops buffeting you.'.italic, 0.08)
+# sleep 3
+# puts ' '
+# puts ' '
+# CharTiming.slow("... there's a low growling nearby. Beside you, about a meter away, is a wolf. ".italic, 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow('... a presumably hungry wolf.'.italic, 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("Okay, don't stress. You have full health. ".italic, 0.08)
+# puts ' '
+# puts ' '
+# puts ' '
+# puts "HP: #{hp.to_s.green.bold}"
+# puts ' '
+# puts ' '
+# begin
+#   choice = prompt.select('What will you do?') do |option|
+#     option.choice 'a) Reason with the wolf! (30% chance)'
+#     option.choice 'b) Attack the wolf!! (40% chance)'
+#     option.choice 'c) Climb the tree! (50% chance)'
+#     option.choice 'd) exit'
+#   end
+# rescue StandardError => e
+#   puts 'an unknown error occured. Please restart the program.'.red
+# end
+# case choice
+# when 'a) Reason with the wolf! (30% chance)'
+#   number = rand(1..100)
+#   if number <= 30
+#     puts 'Success!'.green
+#     CharTiming.slow('You tell the wolf your story, and it is moved. It stops growling, ', 0.08)
+#     CharTiming.slow('and listens intently. ', 0.08)
+#     CharTiming.slow("'That's the saddest story I have ever heard.' ", 0.08)
+#     CharTiming.slow('says the wolf. ', 0.08)
+#     CharTiming.slow('It can talk!!'.cyan, 0.08)
+#   elsif number > 30
+#     puts 'Unsuccessful'.light_red
+#     CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
+#     hp = 80
+#     CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
+#     CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
+#     CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
+#   end
+# when 'b) Attack the wolf!! (40% chance)'
+#   number = rand(1..100)
+#   if number <= 40
+#     puts 'Success!'.green
+#     CharTiming.slow('You wind up and punch the wolf square in the face. It whimpers ', 0.08)
+#     CharTiming.slow('and steps back.', 0.08)
+#     CharTiming.slow("'There's no need for violence!' it howls, 'growling is a force of habit!' ", 0.08)
+#     CharTiming.slow('It can talk!!'.cyan, 0.08)
+#   elsif number > 40
+#     puts 'Unsuccessful'.light_red
+#     CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
+#     hp = 80
+#     CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
+#     CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
+#     CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
+#   end
+# when 'c) Climb the tree! (50% chance)'
+#   number = rand(1..100)
+#   if number <= 50
+#     puts ' '
+#     puts 'Success!'.green
+#     puts ' '
+#     CharTiming.slow('You turn and scramble up the tree you were taking shelter under. ', 0.08)
+#     CharTiming.slow('The wolf approaches the trunk and gazes up at you. ', 0.08)
+#     CharTiming.slow("'Hmm. Smart.' says the wolf. ", 0.08)
+#     CharTiming.slow('It can talk!!'.cyan, 0.08)
+#   elsif number > 40
+#     puts ' '
+#     puts 'Unsuccessful'.light_red
+#     puts ' '
+#     CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
+#     hp = 80
+#     CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
+#     CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
+#     CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
+#   end
+# when 'd) exit'
+#   exit!(0)
+# end
+# puts ' '
+# puts ' '
+# CharTiming.slow("'You didn't need to freak out', says the wolf, 'I haven't ", 0.08)
+# CharTiming.slow("seen anyone here for a long time. You can't be here on purpose. ", 0.08)
+# CharTiming.slow("Lucky for you I'm not as mean as I look. I'll help you get out...", 0.08)
+# CharTiming.slow("if you have a pineapple.'", 0.08)
+# puts ' '
+# puts ' '
+# if chosen_item == 'Pineapple'
+#   CharTiming.slow('You show him your pineapple, and he takes it with glee. '.italic, 0.08)
+#   CharTiming.slow("'Fantastic! These are my favourite.' ", 0.08)
+#   CharTiming.slow('he looks around, '.italic, 0.08)
+#   CharTiming.slow("'Hmm...' ", 0.08)
+# else
+#   CharTiming.slow('You shake your head and tell him that you have only '.italic, 0.08)
+#   CharTiming.slow("your #{chosen_item}. He clicks his tongue and shrugs. ".italic, 0.08)
+#   CharTiming.slow("'What am I supposed to do with a #{chosen_item}? Oh well, ", 0.08)
+#   CharTiming.slow("it was worth a shot. Don't worry, I'll still help you.' ", 0.08)
+# end
+# CharTiming.slow('He sniffs the air. '.italic, 0.08)
 
 # CharTiming.slow("'We'd better get going. I'll show you to where you need to go.' ", 0.08)
 # puts ' '
@@ -280,8 +280,10 @@ CharTiming.slow('He sniffs the air. '.italic, 0.08)
 # CharTiming.slow("'Here is the firssssst:'", 0.08)
 # puts ' '
 # puts ' '
-puts "'I have cities but no houses; I have mountains but no trees. I have "
+puts "'I have cities but no houses; I have mountains but no trees. I have ".blue
 puts "water, but no fish. What am I?'".blue
+puts ' '
+puts ' '
 
 loop do
     begin
@@ -297,30 +299,129 @@ loop do
         puts 'an unknown error occured. Please restart the program.'.red
     end
 
-
     case choice
     when 'A dream'
-        CharTiming.slow("'Incorrect!", 0.08)
+        puts ' '
+        CharTiming.slow("Incorrect! ".red, 0.08)
+        new_hp = hp - 20
+        puts ' '
+        puts ' '
+        puts "You lost 20 HP. Your HP is now " + "#{new_hp.to_s.yellow}."
+        puts ' '
+        CharTiming.slow("'The ansssswer is a map!' ", 0.08)
+        puts ' '
+        puts ' '
+        CharTiming.slow("'Too bad. Here is the ssssecond riddle: ", 0.08)
+        puts ' '
+        puts ' '
         break
     when 'A map'
-        CharTiming.slow("Correct!", 0.08)
+        puts ' '
+        puts ' '
+        CharTiming.slow("Correct!".green, 0.08)
+        puts ' '
+        puts ' '
+        CharTiming.slow("'Well done. Here is the sssssecond riddle: ", 0.08)
+        puts ' '
+        puts ' '
     break
     when 'A drawing'
+        puts ' '
         CharTiming.slow("Incorrect!".red, 0.08)
+        new_hp = hp - 30
+        puts ' '
+        puts ' '
+        puts "You lost 30 HP. Your HP is now " + "#{new_hp.to_s.yellow}."
+        puts ' '
+        CharTiming.slow("'The ansssswer is a map!' ", 0.08)
+        puts ' '
+        puts ' '
+        CharTiming.slow("'Too bad. Here is the ssssecond riddle: ", 0.08)
+        puts ' '
+        puts ' '
         break
     when 'Ask the wolf'
         if chosen_item == 'Pineapple'
-            CharTiming.slow("It's a map, friend.", 0.08)
+            puts ' '
+            puts ' '
+            CharTiming.slow("I'm going to help you this one ", 0.08)
+            CharTiming.slow("time because you gave me a pineapple. ", 0.08)
+            CharTiming.slow("The answer is a map, friend. ", 0.08)
+            puts ' '
+            puts ' '
         else 
-            CharTiming.slow("I can't help you.", 0.08)
+            puts ' '
+            puts ' '
+            CharTiming.slow("'Sorry bud, no pineapple, no help. For reals this time. ", 0.08)
+            puts ' '
+            puts ' '
         end
     when 'Ask the snake'
         if chosen_item == 'Photo'
-            CharTiming.slow("'Can help bc photo'", 0.08)
+            puts ' '
+            puts ' '
+            CharTiming.slow("'I will need sssssome sort of proof that you ", 0.08)
+            CharTiming.slow("have a reasssson to be in my temple.' ", 0.08)
+            puts ' '
+            puts ' '
+            CharTiming.slow("You take out your #{chosen_item} and show him ".italic, 0.08)
+            CharTiming.slow("that someone is missing you back home.".italic, 0.08)
+            puts ' '
+            puts ' '
+            CharTiming.slow("'Ssssso sssssweet. Very well, I will give you the ", 0.08)
+            CharTiming.slow("ansssswer, thissss one time. It issss a map. ", 0.08)
+            puts ' '
+            puts ' '
         else 
-            CharTiming.slow("Can't help bc not photo", 0.08)
+            puts ' '
+            puts ' '
+            CharTiming.slow("'If only you had sssssome proof that you have a ", 0.08)
+            CharTiming.slow("reassssson to be in my temple. I will not give you ", 0.08)
+            CharTiming.slow("the ansssswer.' ", 0.08)
+            puts ' '
+            puts ' '
         end
     when 'exit program'
         exit!(0)
     end
 end
+
+begin
+    puts "'What word in the English language does the following: ".blue
+    puts "The first two letters signify a man, the first three ".blue
+    puts "letters signify a woman, the first four letters signify ".blue
+    puts "a great man, while the entire word signifies a great woman. ".blue
+    puts ' '
+    puts ' '
+    puts "What is the word? (Type in one word, then push Enter)".cyan
+
+    user_word = gets.chomp.downcase
+rescue 
+    retry
+end
+
+
+    if user_word == 'heroine'
+        puts ' '
+        puts ' '
+        CharTiming.slow("Correct! ".green, 0.08)
+        puts ' '
+        puts ' '
+        CharTiming.slow('Well done. Here isss the last one: ', 0.08)
+        puts ' '
+        puts ' '
+        
+    elsif user_word == 'exit'
+        exit!(0)
+    else 
+        puts ' '
+        puts ' '
+        CharTiming.slow("Incorrect!".red, 0.08)
+        puts ' '
+        puts ' '
+        CharTiming.slow("'Too bad. The anssswer is 'heroine'. ", 0.08)
+        CharTiming.slow("Here isss the final riddle:' ", 0.08)
+        puts ' '
+        puts ' '
+        
+    end
