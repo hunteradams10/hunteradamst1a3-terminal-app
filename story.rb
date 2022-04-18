@@ -303,10 +303,10 @@ loop do
     when 'A dream'
         puts ' '
         CharTiming.slow("Incorrect! ".red, 0.08)
-        new_hp = hp - 20
+        hp = hp - 20
         puts ' '
         puts ' '
-        puts "You lost 20 HP. Your HP is now " + "#{new_hp.to_s.yellow}."
+        puts "You lost 20 HP. Your HP is now " + "#{hp.to_s.yellow}."
         puts ' '
         CharTiming.slow("'The ansssswer is a map!' ", 0.08)
         puts ' '
@@ -328,7 +328,7 @@ loop do
     when 'A drawing'
         puts ' '
         CharTiming.slow("Incorrect!".red, 0.08)
-        new_hp = hp - 30
+        hp = hp - 30
         puts ' '
         puts ' '
         puts "You lost 30 HP. Your HP is now " + "#{new_hp.to_s.yellow}."
@@ -410,18 +410,57 @@ end
         CharTiming.slow('Well done. Here isss the last one: ', 0.08)
         puts ' '
         puts ' '
-        
     elsif user_word == 'exit'
         exit!(0)
     else 
         puts ' '
         puts ' '
         CharTiming.slow("Incorrect!".red, 0.08)
+        hp = hp -= 10
+        puts ' '
+        puts ' '
+        puts "You lost 10 HP. Your HP is now " + "#{hp.to_s.yellow}."
+        puts ' '
         puts ' '
         puts ' '
         CharTiming.slow("'Too bad. The anssswer is 'heroine'. ", 0.08)
         CharTiming.slow("Here isss the final riddle:' ", 0.08)
         puts ' '
         puts ' '
-        
     end
+
+    puts "What disappears as soon as you say its name? Type one word and push Enter.".blue
+    user_word = gets.chomp.downcase
+    
+    if user_word == 'silence'
+        puts ' '
+        puts ' '
+        CharTiming.slow("Correct! ".green, 0.08)
+        puts ' '
+        puts ' '
+        CharTiming.slow('Well done, you are a smart one.', 0.08)
+        puts ' '
+        puts ' '
+    elsif user_word == 'exit'
+        exit!(0)
+    else 
+        puts ' '
+        puts ' '
+        CharTiming.slow("Incorrect!".red, 0.08)
+        hp = hp - 10
+        puts ' '
+        puts ' '
+        puts "You lost 10 HP. Your HP is now " + "#{hp.to_s.yellow}."
+        puts ' '
+        puts ' '
+        puts ' '
+        CharTiming.slow("'Too bad. The anssswer is 'silence'. ", 0.08)
+        CharTiming.slow("'That wassss fun for me. ", 0.08)
+        puts ' '
+        puts ' '
+    end
+
+    CharTiming.slow("Very well. You may enter the temple. Good luck.'", 0.08)
+    puts ' '
+    puts ' '
+
