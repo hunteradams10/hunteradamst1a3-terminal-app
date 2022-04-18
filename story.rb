@@ -470,42 +470,41 @@ puts '##########################################################################
 hp = 100
 puts ' '
 puts ' '
-puts "HP: " + "#{hp.to_s.green}."
+puts "HP: #{hp.to_s.green}."
 puts ' '
 puts ' '
 CharTiming.slow("'That's better,' ", 0.08)
-CharTiming.slow("says the wolf, ".italic, 0.08)
+CharTiming.slow('says the wolf, '.italic, 0.08)
 CharTiming.slow("'you're free to go now. ", 0.08)
 puts ' '
 puts ' '
 choice = prompt.select('Do you have anything else to say to the wolf?') do |option|
-          option.choice 'Pat the wolf'
-          option.choice 'Talk to the wolf'
-          option.choice 'Attack the wolf!'
-          option.choice 'exit program'
-        end
+  option.choice 'Pat the wolf'
+  option.choice 'Talk to the wolf'
+  option.choice 'Attack the wolf!'
+  option.choice 'exit program'
+end
 
-        case choice 
-        when 'Pat the wolf'
-            puts ' '
-            puts ' '
-            puts scary_wolf.pur
-            puts ' '
-            puts ' '
-        when 'Talk to the wolf'
-            puts ' '
-            puts ' '
-            puts scary_wolf.talk
-            puts ' '
-            puts ' '
-        when 'Attack the wolf!'
-            puts ' '
-            puts ' '
-            puts scary_wolf.growl
-            puts ' '
-            puts ' '
-        end
-
+case choice
+when 'Pat the wolf'
+  puts ' '
+  puts ' '
+  puts scary_wolf.pur
+  puts ' '
+  puts ' '
+when 'Talk to the wolf'
+  puts ' '
+  puts ' '
+  puts scary_wolf.talk
+  puts ' '
+  puts ' '
+when 'Attack the wolf!'
+  puts ' '
+  puts ' '
+  puts scary_wolf.growl
+  puts ' '
+  puts ' '
+end
 
 CharTiming.slow("Well done, #{name}. Time to go home.", 0.08)
 puts ' '
