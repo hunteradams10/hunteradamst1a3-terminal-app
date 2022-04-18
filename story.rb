@@ -286,181 +286,173 @@ puts ' '
 puts ' '
 
 loop do
-    begin
-        choice = prompt.select('What is the answer?') do |option|
-        option.choice 'A dream'
-        option.choice 'A map'
-        option.choice 'A drawing'
-        option.choice 'Ask the wolf'
-        option.choice 'Ask the snake'
-        option.choice 'exit program'
+  begin
+    choice = prompt.select('What is the answer?') do |option|
+      option.choice 'A dream'
+      option.choice 'A map'
+      option.choice 'A drawing'
+      option.choice 'Ask the wolf'
+      option.choice 'Ask the snake'
+      option.choice 'exit program'
     end
-    rescue StandardError => e
-        puts 'an unknown error occured. Please restart the program.'.red
-    end
+  rescue StandardError => e
+    puts 'an unknown error occured. Please restart the program.'.red
+  end
 
-    case choice
-    when 'A dream'
-        puts ' '
-        CharTiming.slow("Incorrect! ".red, 0.08)
-        hp = hp - 20
-        puts ' '
-        puts ' '
-        puts "You lost 20 HP. Your HP is now " + "#{hp.to_s.yellow}."
-        puts ' '
-        CharTiming.slow("'The ansssswer is a map!' ", 0.08)
-        puts ' '
-        puts ' '
-        CharTiming.slow("'Too bad. Here is the ssssecond riddle: ", 0.08)
-        puts ' '
-        puts ' '
-        break
-    when 'A map'
-        puts ' '
-        puts ' '
-        CharTiming.slow("Correct!".green, 0.08)
-        puts ' '
-        puts ' '
-        CharTiming.slow("'Well done. Here is the sssssecond riddle: ", 0.08)
-        puts ' '
-        puts ' '
+  case choice
+  when 'A dream'
+    puts ' '
+    CharTiming.slow('Incorrect! '.red, 0.08)
+    hp -= 20
+    puts ' '
+    puts ' '
+    puts "You lost 20 HP. Your HP is now #{hp.to_s.yellow}."
+    puts ' '
+    CharTiming.slow("'The ansssswer is a map!' ", 0.08)
+    puts ' '
+    puts ' '
+    CharTiming.slow("'Too bad. Here is the ssssecond riddle: ", 0.08)
+    puts ' '
+    puts ' '
     break
-    when 'A drawing'
-        puts ' '
-        CharTiming.slow("Incorrect!".red, 0.08)
-        hp = hp - 30
-        puts ' '
-        puts ' '
-        puts "You lost 30 HP. Your HP is now " + "#{new_hp.to_s.yellow}."
-        puts ' '
-        CharTiming.slow("'The ansssswer is a map!' ", 0.08)
-        puts ' '
-        puts ' '
-        CharTiming.slow("'Too bad. Here is the ssssecond riddle: ", 0.08)
-        puts ' '
-        puts ' '
-        break
-    when 'Ask the wolf'
-        if chosen_item == 'Pineapple'
-            puts ' '
-            puts ' '
-            CharTiming.slow("I'm going to help you this one ", 0.08)
-            CharTiming.slow("time because you gave me a pineapple. ", 0.08)
-            CharTiming.slow("The answer is a map, friend. ", 0.08)
-            puts ' '
-            puts ' '
-        else 
-            puts ' '
-            puts ' '
-            CharTiming.slow("'Sorry bud, no pineapple, no help. For reals this time. ", 0.08)
-            puts ' '
-            puts ' '
-        end
-    when 'Ask the snake'
-        if chosen_item == 'Photo'
-            puts ' '
-            puts ' '
-            CharTiming.slow("'I will need sssssome sort of proof that you ", 0.08)
-            CharTiming.slow("have a reasssson to be in my temple.' ", 0.08)
-            puts ' '
-            puts ' '
-            CharTiming.slow("You take out your #{chosen_item} and show him ".italic, 0.08)
-            CharTiming.slow("that someone is missing you back home.".italic, 0.08)
-            puts ' '
-            puts ' '
-            CharTiming.slow("'Ssssso sssssweet. Very well, I will give you the ", 0.08)
-            CharTiming.slow("ansssswer, thissss one time. It issss a map. ", 0.08)
-            puts ' '
-            puts ' '
-        else 
-            puts ' '
-            puts ' '
-            CharTiming.slow("'If only you had sssssome proof that you have a ", 0.08)
-            CharTiming.slow("reassssson to be in my temple. I will not give you ", 0.08)
-            CharTiming.slow("the ansssswer.' ", 0.08)
-            puts ' '
-            puts ' '
-        end
-    when 'exit program'
-        exit!(0)
+  when 'A map'
+    puts ' '
+    puts ' '
+    CharTiming.slow('Correct!'.green, 0.08)
+    puts ' '
+    puts ' '
+    CharTiming.slow("'Well done. Here is the sssssecond riddle: ", 0.08)
+    puts ' '
+    puts ' '
+    break
+  when 'A drawing'
+    puts ' '
+    CharTiming.slow('Incorrect!'.red, 0.08)
+    hp -= 30
+    puts ' '
+    puts ' '
+    puts "You lost 30 HP. Your HP is now #{new_hp.to_s.yellow}."
+    puts ' '
+    CharTiming.slow("'The ansssswer is a map!' ", 0.08)
+    puts ' '
+    puts ' '
+    CharTiming.slow("'Too bad. Here is the ssssecond riddle: ", 0.08)
+    puts ' '
+    puts ' '
+    break
+  when 'Ask the wolf'
+    puts ' '
+    puts ' '
+    if chosen_item == 'Pineapple'
+      CharTiming.slow("I'm going to help you this one ", 0.08)
+      CharTiming.slow('time because you gave me a pineapple. ', 0.08)
+      CharTiming.slow('The answer is a map, friend. ', 0.08)
+    else
+      CharTiming.slow("'Sorry bud, no pineapple, no help. For reals this time. ", 0.08)
     end
+    puts ' '
+    puts ' '
+  when 'Ask the snake'
+    puts ' '
+    puts ' '
+    if chosen_item == 'Photo'
+      CharTiming.slow("'I will need sssssome sort of proof that you ", 0.08)
+      CharTiming.slow("have a reasssson to be in my temple.' ", 0.08)
+      puts ' '
+      puts ' '
+      CharTiming.slow("You take out your #{chosen_item} and show him ".italic, 0.08)
+      CharTiming.slow('that someone is missing you back home.'.italic, 0.08)
+      puts ' '
+      puts ' '
+      CharTiming.slow("'Ssssso sssssweet. Very well, I will give you the ", 0.08)
+      CharTiming.slow('ansssswer, thissss one time. It issss a map. ', 0.08)
+    else
+      CharTiming.slow("'If only you had sssssome proof that you have a ", 0.08)
+      CharTiming.slow('reassssson to be in my temple. I will not give you ', 0.08)
+      CharTiming.slow("the ansssswer.' ", 0.08)
+    end
+    puts ' '
+    puts ' '
+  when 'exit program'
+    exit!(0)
+  end
 end
 
 begin
-    puts "'What word in the English language does the following: ".blue
-    puts "The first two letters signify a man, the first three ".blue
-    puts "letters signify a woman, the first four letters signify ".blue
-    puts "a great man, while the entire word signifies a great woman. ".blue
-    puts ' '
-    puts ' '
-    puts "What is the word? (Type in one word, then push Enter)".cyan
+  puts "'What word in the English language does the following: ".blue
+  puts 'The first two letters signify a man, the first three '.blue
+  puts 'letters signify a woman, the first four letters signify '.blue
+  puts 'a great man, while the entire word signifies a great woman. '.blue
+  puts ' '
+  puts ' '
+  puts 'What is the word? (Type in one word, then push Enter)'.cyan
 
-    user_word = gets.chomp.downcase
-rescue 
-    retry
+  user_word = gets.chomp.downcase
+rescue StandardError
+  retry
 end
 
+case user_word
+when 'heroine'
+  puts ' '
+  puts ' '
+  CharTiming.slow('Correct! '.green, 0.08)
+  puts ' '
+  puts ' '
+  CharTiming.slow('Well done. Here isss the last one: ', 0.08)
+  puts ' '
+  puts ' '
+when 'exit'
+  exit!(0)
+else
+  puts ' '
+  puts ' '
+  CharTiming.slow('Incorrect!'.red, 0.08)
+  hp = hp -= 10
+  puts ' '
+  puts ' '
+  puts "You lost 10 HP. Your HP is now #{hp.to_s.yellow}."
+  puts ' '
+  puts ' '
+  puts ' '
+  CharTiming.slow("'Too bad. The anssswer is 'heroine'. ", 0.08)
+  CharTiming.slow("Here isss the final riddle:' ", 0.08)
+  puts ' '
+  puts ' '
+end
 
-    if user_word == 'heroine'
-        puts ' '
-        puts ' '
-        CharTiming.slow("Correct! ".green, 0.08)
-        puts ' '
-        puts ' '
-        CharTiming.slow('Well done. Here isss the last one: ', 0.08)
-        puts ' '
-        puts ' '
-    elsif user_word == 'exit'
-        exit!(0)
-    else 
-        puts ' '
-        puts ' '
-        CharTiming.slow("Incorrect!".red, 0.08)
-        hp = hp -= 10
-        puts ' '
-        puts ' '
-        puts "You lost 10 HP. Your HP is now " + "#{hp.to_s.yellow}."
-        puts ' '
-        puts ' '
-        puts ' '
-        CharTiming.slow("'Too bad. The anssswer is 'heroine'. ", 0.08)
-        CharTiming.slow("Here isss the final riddle:' ", 0.08)
-        puts ' '
-        puts ' '
-    end
+puts 'What disappears as soon as you say its name? Type one word and push Enter.'.blue
+user_word = gets.chomp.downcase
 
-    puts "What disappears as soon as you say its name? Type one word and push Enter.".blue
-    user_word = gets.chomp.downcase
-    
-    if user_word == 'silence'
-        puts ' '
-        puts ' '
-        CharTiming.slow("Correct! ".green, 0.08)
-        puts ' '
-        puts ' '
-        CharTiming.slow('Well done, you are a smart one.', 0.08)
-        puts ' '
-        puts ' '
-    elsif user_word == 'exit'
-        exit!(0)
-    else 
-        puts ' '
-        puts ' '
-        CharTiming.slow("Incorrect!".red, 0.08)
-        hp = hp - 10
-        puts ' '
-        puts ' '
-        puts "You lost 10 HP. Your HP is now " + "#{hp.to_s.yellow}."
-        puts ' '
-        puts ' '
-        puts ' '
-        CharTiming.slow("'Too bad. The anssswer is 'silence'. ", 0.08)
-        CharTiming.slow("'That wassss fun for me. ", 0.08)
-        puts ' '
-        puts ' '
-    end
+case user_word
+when 'silence'
+  puts ' '
+  puts ' '
+  CharTiming.slow('Correct! '.green, 0.08)
+  puts ' '
+  puts ' '
+  CharTiming.slow('Well done, you are a smart one.', 0.08)
+  puts ' '
+  puts ' '
+when 'exit'
+  exit!(0)
+else
+  puts ' '
+  puts ' '
+  CharTiming.slow('Incorrect!'.red, 0.08)
+  hp -= 10
+  puts ' '
+  puts ' '
+  puts "You lost 10 HP. Your HP is now #{hp.to_s.yellow}."
+  puts ' '
+  puts ' '
+  puts ' '
+  CharTiming.slow("'Too bad. The anssswer is 'silence'. ", 0.08)
+  CharTiming.slow("'That wassss fun for me. ", 0.08)
+  puts ' '
+  puts ' '
+end
 
-    CharTiming.slow("Very well. You may enter the temple. Good luck.'", 0.08)
-    puts ' '
-    puts ' '
-
+CharTiming.slow("Very well. You may enter the temple. Good luck.'", 0.08)
+puts ' '
+puts ' '
