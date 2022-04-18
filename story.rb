@@ -46,73 +46,73 @@ puts 'WELCOME'.cyan
 puts ' '
 puts '#############################################################################################'
 
-sleep(2)
+# sleep(2)
 
-print TTY::Box.frame { 'CHAPTER ONE                                                                 ' }
+# print TTY::Box.frame { 'CHAPTER ONE                                                                 ' }
 
-puts ' '
-puts ' '
-CharTiming.slow("Hello, #{name}. You must be exhausted, but I can see that you're #{mood}. ", 0.08)
-puts ' '
-CharTiming.slow("Maybe just sit here for a while and take it in -- look, the weather is #{weather}, ", 0.08)
-CharTiming.slow("and you don't have to do anything right now. Remember #{pet}? What a lovely creature. ", 0.08)
-puts ' '
-CharTiming.slow("Don't get stressed. Just sit still and think really hard about #{favourite_thing}. ", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("Hello, #{name}. You must be exhausted, but I can see that you're #{mood}. ", 0.08)
+# puts ' '
+# CharTiming.slow("Maybe just sit here for a while and take it in -- look, the weather is #{weather}, ", 0.08)
+# CharTiming.slow("and you don't have to do anything right now. Remember #{pet}? What a lovely creature. ", 0.08)
+# puts ' '
+# CharTiming.slow("Don't get stressed. Just sit still and think really hard about #{favourite_thing}. ", 0.08)
 
-puts ' '
-puts ' '
-CharTiming.slow('...', 1)
-puts ' '
-puts ' '
-CharTiming.slow('So...', 1)
-CharTiming.slow("the thing is... your plane went down about a day ago, you've been unconscious for a while. ", 0.08)
-puts ' '
-puts ' '
-CharTiming.slow('...', 1)
-CharTiming.slow("you're the only survivor -- you're okay, though. ", 0.08)
-puts ' '
-puts ' '
-CharTiming.slow('...', 1)
+# puts ' '
+# puts ' '
+# CharTiming.slow('...', 1)
+# puts ' '
+# puts ' '
+# CharTiming.slow('So...', 1)
+# CharTiming.slow("the thing is... your plane went down about a day ago, you've been unconscious for a while. ", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow('...', 1)
+# CharTiming.slow("you're the only survivor -- you're okay, though. ", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow('...', 1)
 
-loop do
-  CharTiming.slow("are you okay? (Y/N, help or exit) \n".light_blue, 0.08)
-  if_okay = $stdin.gets.chomp.downcase
-  puts ' '
-  case if_okay
-  when 'y'
-    CharTiming.slow("I knew it! Thank goodness for that, because you have to get out of here. \n", 0.08)
-    break
-  when 'n'
-    CharTiming.slow("I'm sorry to hear that... but you don't have time to feel bad, I'm afraid. ", 0.08)
-    CharTiming.slow("You have to get out of here. \n", 0.08)
-    break
-  when 'help'
-    help_ruok = File.open('help_ruok.txt')
-    puts help_ruok.read
-  when 'exit'
-    exit!(0)
-  else
-    puts "Invalid input, type 'Y', 'N', 'help', or 'exit'".red
-    puts ' '
-  end
-end
+# loop do
+#   CharTiming.slow("are you okay? (Y/N, help or exit) \n".light_blue, 0.08)
+#   if_okay = $stdin.gets.chomp.downcase
+#   puts ' '
+#   case if_okay
+#   when 'y'
+#     CharTiming.slow("I knew it! Thank goodness for that, because you have to get out of here. \n", 0.08)
+#     break
+#   when 'n'
+#     CharTiming.slow("I'm sorry to hear that... but you don't have time to feel bad, I'm afraid. ", 0.08)
+#     CharTiming.slow("You have to get out of here. \n", 0.08)
+#     break
+#   when 'help'
+#     help_ruok = File.open('help_ruok.txt')
+#     puts help_ruok.read
+#   when 'exit'
+#     exit!(0)
+#   else
+#     puts "Invalid input, type 'Y', 'N', 'help', or 'exit'".red
+#     puts ' '
+#   end
+# end
 
-puts ' '
+# puts ' '
 
-CharTiming.slow("... looks like it's about to rain. Better get moving. ", 0.08)
-puts ' '
-CharTiming.slow('Take a quick look around before you go; you might find something useful. ', 0.08)
-puts ' '
-puts ' '
-CharTiming.slow(
-  'You look around the sandy shoreline and discover a pineapple, a photo of your loved one, and a ring. '.italic, 0.08
-)
-puts ' '
-puts ' '
-sleep 2
-CharTiming.slow('Unfortunately, you can only take one item. Choose wisely.', 0.08)
-puts ' '
-puts ' '
+# CharTiming.slow("... looks like it's about to rain. Better get moving. ", 0.08)
+# puts ' '
+# CharTiming.slow('Take a quick look around before you go; you might find something useful. ', 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow(
+#   'You look around the sandy shoreline and discover a pineapple, a photo of your loved one, and a ring. '.italic, 0.08
+# )
+# puts ' '
+# puts ' '
+# sleep 2
+# CharTiming.slow('Unfortunately, you can only take one item. Choose wisely.', 0.08)
+# puts ' '
+# puts ' '
 
 choice = prompt.select('What will you take? Select with ↑/↓ arrow keys, then Enter') do |option|
   option.choice 'Pineapple'
@@ -134,7 +134,7 @@ when 'Ring'
   puts ' '
   puts 'This ring might be valuable when you get out of here.'
   puts ' '
-when 'exit program'
+when 'exit'
   exit!(0)
 end
 
@@ -165,7 +165,7 @@ begin
     option.choice 'a) Reason with the wolf! (30% chance)'
     option.choice 'b) Attack the wolf!! (40% chance)'
     option.choice 'c) Climb the tree! (50% chance)'
-    option.choice 'd) exit program'
+    option.choice 'd) exit'
   end
 rescue StandardError => e
   puts 'an unknown error occured. Please restart the program.'.red
@@ -207,20 +207,24 @@ when 'b) Attack the wolf!! (40% chance)'
 when 'c) Climb the tree! (50% chance)'
   number = rand(1..100)
   if number <= 50
+    puts ' '
     puts 'Success!'.green
+    puts ' '
     CharTiming.slow('You turn and scramble up the tree you were taking shelter under. ', 0.08)
     CharTiming.slow('The wolf approaches the trunk and gazes up at you. ', 0.08)
     CharTiming.slow("'Hmm. Smart.' says the wolf. ", 0.08)
     CharTiming.slow('It can talk!!'.cyan, 0.08)
   elsif number > 40
+    puts ' '
     puts 'Unsuccessful'.light_red
+    puts ' '
     CharTiming.slow('The wolf growls and launches itself at you! ', 0.08)
     hp = 80
     CharTiming.slow("Lost 20HP. Your HP is now #{hp.to_s.bold.green}.\n", 0.08)
     CharTiming.slow("'Bad luck,', says the wolf, 'but brave for trying.' ", 0.08)
     CharTiming.slow('It can talk!!'.bold.cyan, 0.08)
   end
-when 'd) exit program'
+when 'd) exit'
   exit!(0)
 end
 puts ' '
@@ -244,4 +248,79 @@ else
 end
 CharTiming.slow('He sniffs the air. '.italic, 0.08)
 
-CharTiming.slow("'We'd better get going. I'll show you to where you need to go.' ", 0.08)
+# CharTiming.slow("'We'd better get going. I'll show you to where you need to go.' ", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("Well, this is good news! The wolf has agreed to help you!", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("You follow the wolf through the dense understory and eventually ".italic, 0.08)
+# CharTiming.slow("you find yourself standing in front of a large temple.".italic, 0.08)
+# puts ' '
+# CharTiming.slow("'The key to getting out of here is inside this temple,' ", 0.08)
+# CharTiming.slow("he says, ".italic, 0.08)
+# CharTiming.slow("the problem is, it's guarded by a very slippery snake.", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("You smile at him disbelivingly. ".italic, 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("'I know you think I'm joking, but sadly I'm not.'", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("'Did ssssssomeone mention a sssssslippery ssssnake?'", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("At the door appears a bright yellow cobra. He is wearing a big, hissing smile.".italic, 0.08)
+# puts ' '
+# CharTiming.slow("'I will allow you into the temple. But firsssst you musssst ", 0.08)
+# CharTiming.slow("anssswer three riddlessss. I love riddlesssss.'", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("'Here is the firssssst:'", 0.08)
+# puts ' '
+# puts ' '
+puts "'I have cities but no houses; I have mountains but no trees. I have "
+puts "water, but no fish. What am I?'".blue
+
+loop do
+    begin
+        choice = prompt.select('What is the answer?') do |option|
+        option.choice 'A dream'
+        option.choice 'A map'
+        option.choice 'A drawing'
+        option.choice 'Ask the wolf'
+        option.choice 'Ask the snake'
+        option.choice 'exit program'
+    end
+    rescue StandardError => e
+        puts 'an unknown error occured. Please restart the program.'.red
+    end
+
+
+    case choice
+    when 'A dream'
+        CharTiming.slow("'Incorrect!", 0.08)
+        break
+    when 'A map'
+        CharTiming.slow("Correct!", 0.08)
+    break
+    when 'A drawing'
+        CharTiming.slow("Incorrect!".red, 0.08)
+        break
+    when 'Ask the wolf'
+        if chosen_item == 'Pineapple'
+            CharTiming.slow("It's a map, friend.", 0.08)
+        else 
+            CharTiming.slow("I can't help you.", 0.08)
+        end
+    when 'Ask the snake'
+        if chosen_item == 'Photo'
+            CharTiming.slow("'Can help bc photo'", 0.08)
+        else 
+            CharTiming.slow("Can't help bc not photo", 0.08)
+        end
+    when 'exit program'
+        exit!(0)
+    end
+end
