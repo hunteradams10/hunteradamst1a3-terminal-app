@@ -56,9 +56,9 @@ puts ' '
 puts ' '
 CharTiming.slow("Hello, #{name}. You must be exhausted, but I can see that you're #{mood}. ", 0.08)
 puts ' '
-CharTiming.slow("Maybe just sit here for a while and take it in -- ", 0.08)
+CharTiming.slow('Maybe just sit here for a while and take it in -- ', 0.08)
 CharTiming.slow("look, the weather is #{weather}, ", 0.08)
-CharTiming.slow("and you don't have to do anything right now. ", 0.08) 
+CharTiming.slow("and you don't have to do anything right now. ", 0.08)
 CharTiming.slow("Remember #{pet}? What a lovely creature. ", 0.08)
 puts ' '
 CharTiming.slow("Don't get stressed. Just sit still and think really ", 0.08)
@@ -71,7 +71,7 @@ puts ' '
 puts ' '
 CharTiming.slow('So...', 1)
 CharTiming.slow("the thing is... your plane went down about a day ago, you've been ", 0.08)
-CharTiming.slow("unconscious for a while. ", 0.08)
+CharTiming.slow('unconscious for a while. ', 0.08)
 puts ' '
 puts ' '
 CharTiming.slow('...', 1)
@@ -86,7 +86,7 @@ loop do
   puts ' '
   case if_okay
   when 'y'
-    CharTiming.slow("I knew it! Thank goodness for that, ", 0.08)
+    CharTiming.slow('I knew it! Thank goodness for that, ', 0.08)
     CharTiming.slow("because you have to get out of here. \n", 0.08)
     break
   when 'n'
@@ -110,12 +110,12 @@ puts ' '
 CharTiming.slow("... looks like it's about to rain. Better get moving. ", 0.08)
 puts ' '
 puts ' '
-CharTiming.slow("Take a quick look around before you go; you ", 0.08) 
-CharTiming.slow("might find something useful. ", 0.08)
+CharTiming.slow('Take a quick look around before you go; you ', 0.08)
+CharTiming.slow('might find something useful. ', 0.08)
 puts ' '
 puts ' '
-CharTiming.slow("You look around the sandy shoreline and discover a pineapple, ".italic, 0.08)
-CharTiming.slow("a photo of your loved one, and a ring. ".italic, 0.08)
+CharTiming.slow('You look around the sandy shoreline and discover a pineapple, '.italic, 0.08)
+CharTiming.slow('a photo of your loved one, and a ring. '.italic, 0.08)
 puts ' '
 puts ' '
 sleep 2
@@ -211,8 +211,8 @@ when 'b) Attack the wolf!! (40% chance)'
   number = rand(1..100)
   if number <= 40
     puts 'Success!'.green
-    CharTiming.slow("You wind up and punch the wolf square ", 0.08)
-    CharTiming.slow("in the face. It whimpers ", 0.08)
+    CharTiming.slow('You wind up and punch the wolf square ', 0.08)
+    CharTiming.slow('in the face. It whimpers ', 0.08)
     CharTiming.slow('and steps back.', 0.08)
     puts ' '
     puts ' '
@@ -270,7 +270,7 @@ if chosen_item == 'Pineapple'
   puts ' '
   CharTiming.slow("'Fantastic! These are my favourite.' ", 0.08)
   puts ' '
-  CharTiming.slow('he looks around, '.italic, 0.08)
+  CharTiming.slow('He looks around, '.italic, 0.08)
   puts ' '
   CharTiming.slow("'Hmm...' ", 0.08)
 else
@@ -285,20 +285,20 @@ puts ' '
 CharTiming.slow("'We'd better get going. I'll show you to where you need to go.' ", 0.08)
 puts ' '
 puts ' '
-CharTiming.slow("Well, this is good news! The wolf has agreed to help you!", 0.08)
+CharTiming.slow('Well, this is good news! The wolf has agreed to help you!', 0.08)
 puts ' '
 puts ' '
-CharTiming.slow("You follow the wolf through the dense understory and eventually ".italic, 0.08)
+CharTiming.slow('You follow the wolf through the dense understory and eventually '.italic, 0.08)
 puts ' '
-CharTiming.slow("you find yourself standing in front of a large temple.".italic, 0.08)
+CharTiming.slow('you find yourself standing in front of a large temple.'.italic, 0.08)
 puts ' '
 CharTiming.slow("'The key to getting out of here is inside this temple,' ", 0.08)
-CharTiming.slow("he says, ".italic, 0.08)
+CharTiming.slow('he says, '.italic, 0.08)
 puts ' '
 CharTiming.slow("'the problem is, it's guarded by a very slippery snake.'", 0.08)
 puts ' '
 puts ' '
-CharTiming.slow("You smile at him disbelivingly. ".italic, 0.08)
+CharTiming.slow('You smile at him disbelivingly. '.italic, 0.08)
 puts ' '
 puts ' '
 CharTiming.slow("'I know you think I'm joking, but sadly I'm not.'", 0.08)
@@ -307,7 +307,7 @@ puts ' '
 CharTiming.slow("'Did ssssssomeone mention a sssssslippery ssssnake?'", 0.08)
 puts ' '
 puts ' '
-CharTiming.slow("At the door appears a bright yellow cobra. He is wearing a big, hissing smile.".italic, 0.08)
+CharTiming.slow('At the door appears a bright yellow cobra. He is wearing a big, hissing smile.'.italic, 0.08)
 puts ' '
 puts ' '
 CharTiming.slow("'I will allow you into the temple. But firsssst you musssst ", 0.08)
@@ -383,7 +383,7 @@ loop do
     if chosen_item == 'Pineapple'
       CharTiming.slow("'I'm going to help you this one ", 0.08)
       CharTiming.slow('time because you gave me a pineapple. ', 0.08)
-      CharTiming.slow("'The answer is a map, friend.' ", 0.08)
+      CharTiming.slow("The answer is a map, friend.' ", 0.08)
     else
       CharTiming.slow("'Sorry bud, no pineapple, no help. For reals this time.' ", 0.08)
     end
@@ -415,20 +415,15 @@ loop do
   end
 end
 
-begin
-  puts "'What word in the English language does the following: ".blue
-  puts 'The first two letters signify a man, the first three '.blue
-  puts 'letters signify a woman, the first four letters signify '.blue
-  puts 'a great man, while the entire word signifies a great woman. '.blue
-  puts ' '
-  puts ' '
-  puts 'What is the word? (Type in one word, then push Enter)'.cyan
+puts "'What word in the English language does the following: ".blue
+puts 'The first two letters signify a man, the first three '.blue
+puts 'letters signify a woman, the first four letters signify '.blue
+puts 'a great man, while the entire word signifies a great woman. '.blue
+puts ' '
+puts ' '
+puts 'What is the word? (Type in one word, or exit, then push Enter)'.cyan
 
-  user_word = gets.chomp.downcase
-rescue StandardError
-  retry
-end
-
+user_word = $stdin.gets.chomp.downcase
 
 case user_word
 when 'heroine'
@@ -460,7 +455,7 @@ else
 end
 
 puts "What disappears as soon as you say its name? Type one word, or 'exit' and push Enter.".blue
-user_word = gets.chomp.downcase
+user_word = $stdin.gets.chomp.downcase
 
 case user_word
 when 'silence'
@@ -494,16 +489,16 @@ end
 CharTiming.slow("Very well. You may enter the temple. Good luck.'", 0.08)
 puts ' '
 puts ' '
-CharTiming.slow("You enter the temple after the stone door rolls away with a grumble. ".italic, 0.08)
+CharTiming.slow('You enter the temple after the stone door rolls away with a grumble. '.italic, 0.08)
 puts ' '
-CharTiming.slow("Inside is a small floating orb upon a pedestal, and the wolf ".italic, 0.08)
+CharTiming.slow('Inside is a small floating orb upon a pedestal, and the wolf '.italic, 0.08)
 puts ' '
-CharTiming.slow("informs you that this is your ticket home. ".italic, 0.08)
+CharTiming.slow('informs you that this is your ticket home. '.italic, 0.08)
 puts ' '
-CharTiming.slow("You step cautiously up to the orb and touch it. It fills you with healing energy. ".italic, 0.08)
+CharTiming.slow('You step cautiously up to the orb and touch it. It fills you with healing energy. '.italic, 0.08)
 puts ' '
 puts ' '
-hp = Calculator.add(0,100)
+hp = Calculator.add(0, 100)
 puts ' '
 puts ' '
 puts "HP: #{hp.to_s.green}."
