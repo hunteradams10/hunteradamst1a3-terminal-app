@@ -9,12 +9,10 @@ describe "scary_wolf" do
     it 'should call the growl method and return a string' do 
             expect(Wolf.new.growl).to eq("'GRRRrrrr...!!!'")
         end 
+    it 'should call the talk method and return a string' do 
+            expect(Wolf.new.talk).to eq(CharTiming.slow("'I don't think now is the time for talking, pal.'", 0.08))
+        end 
+    it 'should call the pur method and return a string' do 
+            expect(Wolf.new.pur).to eq("'Puurr...'")
+        end
     end 
-
-# Calculator experiment test
-
-# describe Calculator do 
-#     it 'should subtract' do 
-#         expect(Calculator.subtract(5, 3)).to eq(5 - 3)
-#     end 
-# end
