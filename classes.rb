@@ -20,6 +20,11 @@ module Calculator
     result = num1 - num2
     return result
   end
+
+  def self.add(num1, num2)
+    result = num1 + num2
+    return result
+  end
 end
 
 class Wolf
@@ -28,7 +33,7 @@ class Wolf
   end
 
   def pur
-    puts "'Puurr...'"
+    return "'Puurr...'"
   end
 
   def talk
