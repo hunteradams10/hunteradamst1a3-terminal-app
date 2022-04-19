@@ -1,4 +1,9 @@
 This is a story-based game where you follow along reading the 
 prompts and make choices accordingly. You can exit any time you
-are asked for input by typing 'exit' and hitting Enter. :)
+are asked for input by typing 'exit' and hitting Enter.
+
+For questions where you have to enter an answer,
+you can skip it by just pressing "Enter", although
+this will be interpreted as an incorrect answer. 
+You will still progress in the story, though. :)
 

@@ -21,14 +21,14 @@ font = TTY::Font.new(:standard)
 prompt = TTY::Prompt.new
 prompt_wolf = TTY::Prompt.new
 
+hp = 100
+scary_wolf = Wolf.new
+
 name = 'stranger'
 favourite_thing = 'nothing'
 weather = 'sunny'
 mood = 'confused'
 pet = 'Goblin'
-
-hp = 100
-scary_wolf = Wolf.new
 
 name = ARGV[0].capitalize if ARGV[0]
 favourite_thing = ARGV[1].capitalize if ARGV[1]
@@ -147,11 +147,11 @@ puts '##########################################################################
 # CharTiming.slow('You run into the forest and a small stroke of fear creeps up your spine, '.italic, 0.08)
 # CharTiming.slow('but you manage to take shelter under a tree, and the rain stops buffeting you.'.italic, 0.08)
 # sleep 3
-# puts ' '
-# puts ' '
-# puts scary_wolf.growl
-# puts ' '
-# puts ' '
+puts ' '
+puts ' '
+puts scary_wolf.growl
+puts ' '
+puts ' '
 # CharTiming.slow("... there's a low growling nearby. Beside you, about a meter away, is a wolf. ".italic, 0.08)
 # puts ' '
 # puts ' '
@@ -397,6 +397,7 @@ puts '##########################################################################
 #   retry
 # end
 
+
 # case user_word
 # when 'heroine'
 #   puts ' '
@@ -467,51 +468,51 @@ puts '##########################################################################
 # CharTiming.slow("You step cautiously up to the orb and touch it. It fills you with healing energy. ".italic, 0.08)
 # puts ' '
 # puts ' '
-hp = 100
-puts ' '
-puts ' '
-puts "HP: #{hp.to_s.green}."
-puts ' '
-puts ' '
-CharTiming.slow("'That's better,' ", 0.08)
-CharTiming.slow('says the wolf, '.italic, 0.08)
-CharTiming.slow("'you're free to go now. ", 0.08)
-puts ' '
-puts ' '
-choice = prompt.select('Do you have anything else to say to the wolf?') do |option|
-  option.choice 'Pat the wolf'
-  option.choice 'Talk to the wolf'
-  option.choice 'Attack the wolf!'
-  option.choice 'exit program'
-end
+# hp = 100
+# puts ' '
+# puts ' '
+# puts "HP: #{hp.to_s.green}."
+# puts ' '
+# puts ' '
+# CharTiming.slow("'That's better,' ", 0.08)
+# CharTiming.slow('says the wolf, '.italic, 0.08)
+# CharTiming.slow("'you're free to go now. ", 0.08)
+# puts ' '
+# puts ' '
+# choice = prompt.select('Do you have anything else to say to the wolf?') do |option|
+#   option.choice 'Pat the wolf'
+#   option.choice 'Talk to the wolf'
+#   option.choice 'Attack the wolf!'
+#   option.choice 'exit program'
+# end
 
-case choice
-when 'Pat the wolf'
-  puts ' '
-  puts ' '
-  puts scary_wolf.pur
-  puts ' '
-  puts ' '
-when 'Talk to the wolf'
-  puts ' '
-  puts ' '
-  puts scary_wolf.talk
-  puts ' '
-  puts ' '
-when 'Attack the wolf!'
-  puts ' '
-  puts ' '
-  puts scary_wolf.growl
-  puts ' '
-  puts ' '
-end
+# case choice
+# when 'Pat the wolf'
+#   puts ' '
+#   puts ' '
+#   puts scary_wolf.pur
+#   puts ' '
+#   puts ' '
+# when 'Talk to the wolf'
+#   puts ' '
+#   puts ' '
+#   puts scary_wolf.talk
+#   puts ' '
+#   puts ' '
+# when 'Attack the wolf!'
+#   puts ' '
+#   puts ' '
+#   puts scary_wolf.growl
+#   puts ' '
+#   puts ' '
+# end
 
-CharTiming.slow("Well done, #{name}. Time to go home.", 0.08)
-puts ' '
-puts ' '
-CharTiming.slow("You're suddenly transported back home, with #{pet} beside you and ".italic, 0.08)
-CharTiming.slow("you're both surrounded by #{favourite_thing}. You're home safe, ".italic, 0.08)
-CharTiming.slow("and you're about to tell #{pet} quite a story. ".italic, 0.08)
-puts ' '
-puts ' '
-puts the_end.red(font.write('The End'))
+# CharTiming.slow("Well done, #{name}. Time to go home.", 0.08)
+# puts ' '
+# puts ' '
+# CharTiming.slow("You're suddenly transported back home, with #{pet} beside you and ".italic, 0.08)
+# CharTiming.slow("you're both surrounded by #{favourite_thing}. You're home safe, ".italic, 0.08)
+# CharTiming.slow("and you're about to tell #{pet} quite a story. ".italic, 0.08)
+# puts ' '
+# puts ' '
+# puts the_end.red(font.write('The End'))
