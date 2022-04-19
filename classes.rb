@@ -18,13 +18,13 @@ end
 module Calculator
   def self.subtract(num1, num2)
     result = num1 - num2
-    puts result
+    return result
   end
 end
 
 class Wolf
   def growl
-    puts "'GRRRrrrr...!!!'"
+    return "'GRRRrrrr...!!!'"
   end
 
   def pur
@@ -35,3 +35,4 @@ class Wolf
     CharTiming.slow("'I don't think now is the time for talking, pal.'", 0.08)
   end
 end
+
