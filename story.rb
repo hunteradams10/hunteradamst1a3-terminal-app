@@ -45,13 +45,15 @@ puts pastel.red(font.write('Temple  Island'))
 
 puts ' '
 
-puts '#############################################################################################'
+puts '#########################################################################################################'
 puts ' '
-puts 'WELCOME'.cyan
+puts 'WELCOME!! Just a note: Please expand your terminal window to almost maximized, for the best experience!'.bold.cyan
 puts ' '
-puts '#############################################################################################'
-
-sleep(2)
+puts '#########################################################################################################'
+puts ' '
+puts ' '
+puts ' '
+sleep(4)
 
 print TTY::Box.frame { 'CHAPTER ONE                                                                 ' }
 
@@ -61,7 +63,9 @@ CharTiming.slow("Hello, #{name}. You must be exhausted, but I can see that you'r
 puts ' '
 CharTiming.slow('Maybe just sit here for a while and take it in -- ', 0.08)
 CharTiming.slow("look, the weather is #{weather}, ", 0.08)
+puts ' '
 CharTiming.slow("and you don't have to do anything right now. ", 0.08)
+puts ' '
 CharTiming.slow("Remember #{pet}? What a lovely creature. ", 0.08)
 puts ' '
 CharTiming.slow("Don't get stressed. Just sit still and think really ", 0.08)
@@ -152,6 +156,11 @@ end
 
 chosen_item = choice
 
+sleep (4)
+
+print TTY::Box.frame { 'CHAPTER TWO                                                                 ' }
+puts ' '
+puts ' '
 CharTiming.slow("You hug your #{chosen_item} to you, and make your way into the jungle ahead ".italic, 0.08)
 puts ' '
 CharTiming.slow('and the rain begins to fall. '.italic, 0.08)
@@ -215,12 +224,16 @@ when 'b) Attack the wolf!! (40% chance)'
   if number <= 40
     puts 'Success!'.green
     CharTiming.slow('You wind up and punch the wolf square ', 0.08)
+    puts ' '
     CharTiming.slow('in the face. It whimpers ', 0.08)
+    puts ' '
     CharTiming.slow('and steps back.', 0.08)
     puts ' '
     puts ' '
     CharTiming.slow("'There's no need for violence!' it howls, ", 0.08)
+    puts ' '
     CharTiming.slow("'growling is a force of habit!' ", 0.08)
+    puts ' '
     CharTiming.slow('It can talk!!'.cyan, 0.08)
   elsif number > 40
     puts 'Unsuccessful'.light_red
@@ -239,7 +252,9 @@ when 'c) Climb the tree! (50% chance)'
     puts 'Success!'.green
     puts ' '
     CharTiming.slow('You turn and scramble up the tree you were taking shelter under. ', 0.08)
+    puts ' '
     CharTiming.slow('The wolf approaches the trunk and gazes up at you. ', 0.08)
+    puts ' '
     CharTiming.slow("'Hmm. Smart.' says the wolf. ", 0.08)
     CharTiming.slow('It can talk!!'.cyan, 0.08)
   elsif number > 40
@@ -278,17 +293,26 @@ if chosen_item == 'Pineapple'
   CharTiming.slow("'Hmm...' ", 0.08)
 else
   CharTiming.slow('You shake your head and tell him that you have only '.italic, 0.08)
+  puts ' '
   CharTiming.slow("your #{chosen_item}. He clicks his tongue and shrugs. ".italic, 0.08)
+  puts ' '
   CharTiming.slow("'What am I supposed to do with a #{chosen_item}? Oh well, ", 0.08)
+    puts ' '
   CharTiming.slow("it was worth a shot. Don't worry, I'll still help you.' ", 0.08)
 end
 puts ' '
+puts ' '
 CharTiming.slow('He sniffs the air. '.italic, 0.08)
+puts ' '
 puts ' '
 CharTiming.slow("'We'd better get going. I'll show you to where you need to go.' ", 0.08)
 puts ' '
 puts ' '
 CharTiming.slow('Well, this is good news! The wolf has agreed to help you!', 0.08)
+puts ' '
+puts ' '
+sleep (3)
+print TTY::Box.frame { 'CHAPTER THREE                                                                 ' }
 puts ' '
 puts ' '
 CharTiming.slow('You follow the wolf through the dense understory and eventually '.italic, 0.08)
@@ -314,6 +338,7 @@ CharTiming.slow('At the door appears a bright yellow cobra. He is wearing a big,
 puts ' '
 puts ' '
 CharTiming.slow("'I will allow you into the temple. But firsssst you musssst ", 0.08)
+puts ' '
 CharTiming.slow("anssswer three riddlessss. I love riddlesssss.'", 0.08)
 puts ' '
 puts ' '
@@ -385,7 +410,9 @@ loop do
     puts ' '
     if chosen_item == 'Pineapple'
       CharTiming.slow("'I'm going to help you this one ", 0.08)
+      puts ' '
       CharTiming.slow('time because you gave me a pineapple. ', 0.08)
+      puts ' '
       CharTiming.slow("The answer is a map, friend.' ", 0.08)
     else
       CharTiming.slow("'Sorry bud, no pineapple, no help. For reals this time.' ", 0.08)
@@ -397,18 +424,23 @@ loop do
     puts ' '
     if chosen_item == 'Photo'
       CharTiming.slow("'I will need sssssome sort of proof that you ", 0.08)
+      puts ' '
       CharTiming.slow("have a reasssson to be in my temple.' ", 0.08)
       puts ' '
       puts ' '
       CharTiming.slow("You take out your #{chosen_item} and show him ".italic, 0.08)
+      puts ' '
       CharTiming.slow('that someone is missing you back home.'.italic, 0.08)
       puts ' '
       puts ' '
       CharTiming.slow("'Ssssso sssssweet. Very well, I will give you the ", 0.08)
+      puts ' '
       CharTiming.slow('ansssswer, thissss one time. It issss a map. ', 0.08)
     else
       CharTiming.slow("'If only you had sssssome proof that you have a ", 0.08)
+      puts ' '
       CharTiming.slow('reassssson to be in my temple. I will not give you ', 0.08)
+      puts ' '
       CharTiming.slow("the ansssswer.' ", 0.08)
     end
     puts ' '
@@ -529,7 +561,7 @@ when 'Pat the wolf'
 when 'Talk to the wolf'
   puts ' '
   puts ' '
-  puts scary_wolf.talk
+  scary_wolf.talk
   puts ' '
   puts ' '
 when 'Attack the wolf!'
@@ -544,8 +576,13 @@ CharTiming.slow("Well done, #{name}. Time to go home.", 0.08)
 puts ' '
 puts ' '
 CharTiming.slow("You're suddenly transported back home, with #{pet} beside you and ".italic, 0.08)
+puts ' '
 CharTiming.slow("you're both surrounded by #{favourite_thing}. You're home safe, ".italic, 0.08)
+puts ' '
 CharTiming.slow("and you're about to tell #{pet} quite a story. ".italic, 0.08)
 puts ' '
 puts ' '
 puts the_end.red(font.write('The End'))
+puts ' '
+puts ' '
+puts ' '
